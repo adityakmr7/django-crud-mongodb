@@ -74,12 +74,29 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'djongo',
+#         'NAME': 'crud-django',
+#         'HOST': 'mongodb://adityakmr:password1@ds231956.mlab.com:31956/',
+#         'USER': 'adityakmr',
+#         'PASSWORD': 'password1'
+#     }
+# }
+
+
+DATABASES = { 
+    'default': { 
+        'ENGINE': 'djongo', 
+        'NAME': 'crud-django', 
+        'AUTH_SOURCE': 'crud-django', 
+        'USER': 'adityakmr', 
+        'PASSWORD': 'password1', 
+        'HOST': 'ds231956.mlab.com', 
+        'PORT': 31956, 
+    } 
 }
+
 
 
 # Password validation

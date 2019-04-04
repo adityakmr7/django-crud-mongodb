@@ -1,0 +1,11 @@
+<html>
+<head>
+    <title>CRUD-Django</title>
+</head>
+<body>
+    <h1>This is home page.</h1>
+    {% for post  in queryset %}
+        <a href='{% url 'posts:post-detail' id=post.id %}'><p>{{post.title}}</p></a>
+    {% endfor %}
+</body>
+</html>
